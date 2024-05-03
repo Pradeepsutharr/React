@@ -1,5 +1,5 @@
 {
-  "name": "04bg-changer",
+  "name": "05-password-generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
