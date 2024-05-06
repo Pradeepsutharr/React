@@ -7,7 +7,7 @@ import Card from "./components/Card";
 function App() {
   return (
     <>
-      <h1 className="p-3 mb-2 rounded-lg bg-gray-600  hover:bg-blue-500 text-white">
+      <h1 className="p-3 mb-2 rounded-lg bg-gray-600  hover:bg-blue-500 duration-500 text-white">
         Hello
       </h1>
       <Card username="Prateek Sir" btnText="Click me" />
