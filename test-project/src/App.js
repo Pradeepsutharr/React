@@ -16,17 +16,17 @@ function App() {
     if (Num) str += "1234567890";
     if (Symbol) str += "!@#$%&*";
 
-    for (let i = 0; i < Length; i++) {
+    for (let i = 0; i < str.length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       Pass += str.charAt(char);
     }
     setPassword(Pass);
-    // console.log(Pass);
+    console.log(Pass);
   }, [Length, Num, Symbol, setPassword]);
 
   useEffect(() => {
     GeneratePassword();
-    let btn = document.querySelector(".btn");
+    let btn = document.getElementById("btn");
     btn.innerText = "Copy";
     btn.classList.replace("bg-green-500", "bg-blue-500");
   }, [Length, Num, Symbol, GeneratePassword]);
@@ -34,7 +34,7 @@ function App() {
   const CopyPass = useCallback(() => {
     PassRef.current?.select();
     window.navigator.clipboard.writeText(Password);
-    let btn = document.querySelector(".btn");
+    let btn = document.getElementById("btn");
     btn.innerText = "Copied";
     btn.classList.replace("bg-blue-500", "bg-green-500");
   }, [Password]);
@@ -53,7 +53,8 @@ function App() {
           />
           <button
             onClick={CopyPass}
-            className="btn bg-blue-500 px-6 py-2 rounded"
+            className=" bg-blue-500 px-6 py-2 rounded"
+            id="btn"
           >
             Copy
           </button>
