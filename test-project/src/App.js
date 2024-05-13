@@ -21,7 +21,7 @@ function App() {
       Pass += str.charAt(char);
     }
     setPassword(Pass);
-    console.log(Pass);
+    console.log(Pass.length, Pass);
   }, [Length, Num, Symbol, setPassword]);
 
   useEffect(() => {
@@ -37,6 +37,8 @@ function App() {
     let btn = document.getElementById("btn");
     btn.innerText = "Copied";
     btn.classList.replace("bg-blue-500", "bg-green-500");
+    // console.log('Copied:', Password);
+    alert(`Copied:-  ${Password}`)
   }, [Password]);
 
   return (
