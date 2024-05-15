@@ -6,7 +6,7 @@ import useCurrencyInfo from "./Hooks/useCurrencyInfo"
 function App() {
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("usd")
-  const [to, setTo] = useState("Inr")
+  const [to, setTo] = useState("inr")
   const [convertedAmount, setConvertedAmount] = useState(0)
 
 
@@ -28,8 +28,7 @@ function App() {
 
   return (
     <div
-      className="w-full flex flex-wrap justify-center items-center "
-    >
+      className="w-full flex flex-wrap justify-center items-center ">
 
       <h1 className="text-white text-4xl my-5 font-semibold">Currency Converter</h1>
 
@@ -39,16 +38,15 @@ function App() {
             onSubmit={(e) => {
               e.preventDefault();
               convert()
-
             }}
           >
             <div className="w-full mb-1">
               <InputBox
                 label="From"
                 amount={amount}
+                onCrrChange={(Currency) => setAmount(amount)}
                 CrrOptions={options}
-                onCurrencyChange={(Currency) => setAmount(amount)}
-                selectCurrency={from}
+                selectCrr={from}
                 onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
@@ -56,8 +54,7 @@ function App() {
               <button
                 type="button"
                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
-                onClick={swap}
-              >
+                onClick={swap}>
                 swap
               </button>
             </div>
@@ -66,9 +63,10 @@ function App() {
                 label="To"
                 amount={convertedAmount}
                 CrrOptions={options}
-                onCurrencyChange={(Currency) => setTo(Currency)}
-                selectCurrency={to}
+                selectCrr={to}
+                onCrrChange={(Currency) => setTo(Currency)}
                 amountDisable
+
               />
             </div>
             <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">

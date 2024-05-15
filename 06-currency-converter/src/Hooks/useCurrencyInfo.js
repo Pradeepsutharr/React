@@ -8,10 +8,12 @@ function useCurrencyInfo(Currency) {
             `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${Currency}.min.json`
         )
             .then((res) => res.json())
-            .then((res) => setData(res[Currency])).catch((error => console.log("Api Fetch Faild")))
+            .then((res) => setData(res[Currency]))
+            .catch((error => console.log("Api Fetch Faild")))
         // console.log(data);
     }, [Currency]);
-    console.log(data)
+    // console.log(data)
     return data;
 }
 export default useCurrencyInfo;
+ 
