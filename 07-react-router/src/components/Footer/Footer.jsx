@@ -1,6 +1,18 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+
+const NavLinks = [
+    {
+        name: 'Home',
+        to: '/'
+    },
+    {
+        name: 'About',
+        to: '/about'
+    }
+]
+
 function Footer() {
     return (
         <footer className="bg-white border-y">
@@ -19,16 +31,19 @@ function Footer() {
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                             <ul className="text-gray-500 font-medium">
-                                <li className="mb-4">
-                                    <Link to="/home" className="hover:underline">
-                                        Home
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/about" className="hover:underline">
-                                        About
-                                    </Link>
-                                </li>
+
+                                {NavLinks.map((link) => (
+                                    <li key={link.name}
+                                        className="mb-4">
+                                        <NavLink to={link.to} className={({ isActive }) => ` hover:underline ${isActive ? "text-cyan-500" : "text-gray-800"}`}>
+                                            {link.name}
+                                        </NavLink>
+                                    </li>
+                                ))}
+
+
+
+
                             </ul>
                         </div>
                         <div>
@@ -94,7 +109,7 @@ function Footer() {
                             </svg>
                             <span className="sr-only">Facebook page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -106,7 +121,7 @@ function Footer() {
                             </svg>
                             <span className="sr-only">Discord community</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -122,7 +137,7 @@ function Footer() {
                             </svg>
                             <span className="sr-only">Twitter page</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -138,7 +153,7 @@ function Footer() {
                             </svg>
                             <span className="sr-only">GitHub account</span>
                         </Link>
-                        <Link to="#" className="text-gray-500">
+                        <Link to="#" className="text-gray-500 hover:text-gray-900">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -157,7 +172,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }
 
