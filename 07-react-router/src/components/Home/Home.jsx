@@ -72,9 +72,9 @@ function Home() {
 
             <section className='py-10'>
                 <div className="container mx-auto">
-                    <div className="flex  justify-center  flex-wrap">
+                    <div className="grid gap-4 grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
                         {cardItems.map((item) => (
-                            <div className='col xl:w-1/4 lg:w-1/3 md:w-1/2 w-full p-2'>
+                            <div className='col'>
                                 <div className=" rounded-md border">
                                     <img
                                         src={item.image}

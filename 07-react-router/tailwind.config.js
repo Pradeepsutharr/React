@@ -17,10 +17,18 @@ module.exports = {
         xl: '1120px',
         '2xl': '1320px',
       },
-      padding: '.5rem',
+      padding: '1rem',
     },
   },
   plugins: [],
   darkMode: "class",
 }
 
+
+// screens: {
+//   sm: '600px',
+//   md: '720px',
+//   lg: '984px',
+//   xl: '1220px',
+//   '2xl': '1456px',
+// },
