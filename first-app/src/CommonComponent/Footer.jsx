@@ -2,9 +2,11 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div>
-
-        </div>
+        <footer>
+            <div className="container">
+                <div className="flex flex-wrap"></div>
+            </div>
+        </footer>
     )
 }
 

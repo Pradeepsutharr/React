@@ -9,10 +9,10 @@ export default function Homepage() {
           <div className="flex flex-wrap justify-between items-center">
             <div className=" w-full md:w-2/5">
               <div className="hero-text">
-                <h1 className="text-[2.5rem] font-inter mb-2 text-white font-bold leading-tight">
+                <h1 className="text-[3.3rem] font-inter mb-2 text-white font-bold leading-tight">
                   Modern Interior <span className="block">Design Studio</span>
                 </h1>
-                <p className="font-inter text-sm text-gray-400 my-5">
+                <p className="font-inter text-sm text-gray-400 my-7">
                   Donec vitae odio quis nisl dapibus malesuada. Nullam ac
                   aliquet velit. Aliquam vulputate velit imperdiet dolor tempor
                   tristique.

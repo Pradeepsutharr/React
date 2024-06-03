@@ -49,9 +49,8 @@ function Header() {
 
   return (
     <header
-      className={`${
-        headerFixed ? "header-fixed" : "header"
-      } transition-all duration-300`}
+      className={`${headerFixed ? "header-fixed" : "header"
+        } transition-all duration-300`}
       style={{ backgroundColor: "#3b5d50" }}
     >
       <div className="container mx-auto">
@@ -62,18 +61,16 @@ function Header() {
             </Link>
           </div>
           <div
-            className={` items-start transition-all gap-10 duration-300 ${
-              isDesktop ? "flex" : "hidden"
-            }`}
+            className={` items-start transition-all gap-10 duration-300 ${isDesktop ? "flex" : "hidden"
+              }`}
           >
             <ul className=" inline-flex space-x-8 mr-3">
               <li>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active" : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   Home
@@ -84,9 +81,8 @@ function Header() {
                 <NavLink
                   to="/shop"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active" : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   Shop
@@ -97,9 +93,8 @@ function Header() {
                 <NavLink
                   to="/aboutus"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active" : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   About Us
@@ -110,9 +105,8 @@ function Header() {
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active" : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   Services
@@ -123,9 +117,8 @@ function Header() {
                 <NavLink
                   to="/blogs"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active" : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   Blog
@@ -136,9 +129,8 @@ function Header() {
                 <NavLink
                   to="/contact"
                   className={({ isActive }) =>
-                    `inline-flex px-2 items-center font-medium ${
-                      isActive ? "text-yellow-400" : "text-gray-400"
-                    } hover:text-yellow-300 duration-200 text-sm`
+                    `inline-flex mx-2 items-center font-medium ${isActive ? "text-yellow-400 active " : "text-gray-400"
+                    } hover:text-yellow-300 duration-200 text-sm relative`
                   }
                 >
                   Contact Us
@@ -146,21 +138,19 @@ function Header() {
               </li>
             </ul>
             <div
-              className={`space-x-2 transition-all duration-300 ${
-                isDesktop ? "block" : "hidden"
-              }`}
+              className={`space-x-2 transition-all duration-300 ${isDesktop ? "block" : "hidden"
+                }`}
             >
               <ul className="flex gap-8 items-center">
                 <li>
                   <NavLink
                     to="/profile"
                     className={({ isActive }) =>
-                      `inline-flex items-center text-sm font-semibold ${
-                        isActive ? "text-white" : "text-white"
+                      `inline-flex items-center text-sm font-semibold ${isActive ? "text-white" : "text-white"
                       } hover:text-yellow-300 duration-200`
                     }
                   >
-                    <FontAwesomeIcon icon="fa-solid fa-user" />
+                    <FontAwesomeIcon icon="fa-solid fa-user" size="xl" />
                   </NavLink>
                 </li>
 
@@ -168,34 +158,31 @@ function Header() {
                   <NavLink
                     to="/cart"
                     className={({ isActive }) =>
-                      `inline-flex items-center text-sm font-semibold ${
-                        isActive ? "text-white" : "text-white"
+                      `inline-flex items-center text-sm font-semibold ${isActive ? "text-white" : "text-white"
                       } hover:text-yellow-300 duration-200`
                     }
                   >
-                    <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+                    <FontAwesomeIcon icon="fa-solid fa-cart-shopping" size="xl" />
                   </NavLink>
                 </li>
               </ul>
             </div>
           </div>
           <div
-            className={`lg:hidden transition-all duration-300 ${
-              isDesktop ? "hidden" : "block"
-            }`}
+            className={`lg:hidden transition-all duration-300 ${isDesktop ? "hidden" : "block"
+              }`}
           >
-            <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
+            <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer text-white" />
           </div>
           <div
-            className={`absolute inset-x-0 top-0 z-50 origin-top-right transform transition-transform duration-300 lg:hidden ${
-              isMenuOpen ? "scale-y-100 " : "scale-y-0  pointer-events-none"
-            }`}
+            className={`absolute inset-x-0 top-0 z-50 origin-top-right transform transition-transform duration-300 lg:hidden ${isMenuOpen ? "scale-y-100 " : "scale-y-0  pointer-events-none"
+              }`}
           >
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className="divide-y-2 divide-gray-50 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5" style={{ backgroundColor: "#3b5d50" }}>
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
-                    <span className="font-bold text-cyan-600">React.Js</span>
+                    <span className="font-bold text-white text-3xl ">Interior</span>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -204,7 +191,7 @@ function Header() {
                       className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                     >
                       <span className="sr-only">Close menu</span>
-                      <X className="h-6 w-6" aria-hidden="true" />
+                      <X className="h-6 w-6 text-white" aria-hidden="true" />
                     </button>
                   </div>
                 </div>
@@ -213,8 +200,7 @@ function Header() {
                     <NavLink
                       to="/"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -222,10 +208,9 @@ function Header() {
                     </NavLink>
 
                     <NavLink
-                      to="/"
+                      to="/shop"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -233,10 +218,9 @@ function Header() {
                     </NavLink>
 
                     <NavLink
-                      to="/"
+                      to="/about"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -244,10 +228,9 @@ function Header() {
                     </NavLink>
 
                     <NavLink
-                      to="/"
+                      to="/services"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -255,10 +238,9 @@ function Header() {
                     </NavLink>
 
                     <NavLink
-                      to="/"
+                      to="/blogs"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -266,10 +248,9 @@ function Header() {
                     </NavLink>
 
                     <NavLink
-                      to="/"
+                      to="/contact"
                       className={({ isActive }) =>
-                        `inline-flex items-center text-sm font-semibold ${
-                          isActive ? "text-white" : "text-gray-800"
+                        `inline-flex items-center text-sm font-semibold ${isActive ? "text-yellow-400" : "text-gray-400"
                         } hover:text-yellow-300 duration-200`
                       }
                     >
@@ -277,31 +258,29 @@ function Header() {
                     </NavLink>
                   </nav>
                 </div>
-                <div className="mt-2 space-y-2">
-                  <ul className="flex">
+                <div className="mt-6 space-y-2">
+                  <ul className="flex gap-10">
                     <li>
                       <NavLink
-                        to="/"
+                        to="/profile"
                         className={({ isActive }) =>
-                          `inline-flex items-center text-sm font-semibold ${
-                            isActive ? "text-white" : "text-gray-800"
+                          `inline-flex  items-center text-sm font-semibold ${isActive ? "text-white" : "text-gray-400"
                           } hover:text-yellow-300 duration-200`
                         }
                       >
-                        <img className="" src="images/user.svg" alt="" />
+                        <FontAwesomeIcon icon="fa-solid  fa-user" size="xl" />
                       </NavLink>
                     </li>
 
                     <li>
                       <NavLink
-                        to="/"
+                        to="/cart"
                         className={({ isActive }) =>
-                          `inline-flex items-center text-sm font-semibold ${
-                            isActive ? "text-white" : "text-gray-800"
+                          `inline-flex  items-center text-sm font-semibold ${isActive ? "text-white" : "text-gray-400"
                           } hover:text-yellow-300 duration-200`
                         }
                       >
-                        <img className="" src="images/cart.svg" alt="" />
+                        <FontAwesomeIcon icon="fa-solid  fa-cart-shopping" size="xl" />
                       </NavLink>
                     </li>
                   </ul>
@@ -311,7 +290,7 @@ function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 }
 
