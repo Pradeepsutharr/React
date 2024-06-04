@@ -59,7 +59,7 @@ header ul li a.relative::before {
   height: 2px;
   background-color: currentColor;
   position: absolute;
-  bottom: -20%;
+  bottom: -17%;
   left: 0;
   transform-origin: right top;
   transform: scale(0, 1);
@@ -108,4 +108,53 @@ header ul li a.active:before {
 .swiper-pagination-bullet-active {
   opacity: 1;
   background: #3b5d50;
+}
+
+.product-card {
+  position: relative;
+  z-index: 1;
+}
+
+.product-card:before {
+  content: "";
+  width: 100%;
+  background-color: #dce5e4;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  border-radius: 10px;
+  height: 0;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover:before {
+  height: 80%;
+}
+
+.product-card img {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: translateY(-25px);
+}
+
+.product-card .add-btn a {
+  opacity: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover .add-btn a {
+  bottom: -4.5%;
+  opacity: 1;
+}
+
+.blog-content .blog-img img {
+  transition: all 0.3s ease;
+}
+
+.blog-content:hover .blog-img img {
+  opacity: 0.7;
 }

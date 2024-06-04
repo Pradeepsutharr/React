@@ -1,16 +1,16 @@
 import React from "react";
 import WhyChooseUs from "./WhyChooseUs";
 
-export default function Homepage() {
+export default function Hero({ heading, headingSpan }) {
   return (
     <>
-      <section className="home py-8" style={{ backgroundColor: "#3b5d50" }}>
+      <section className="home py-20 md:py-0" style={{ backgroundColor: "#3b5d50" }}>
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-between items-center">
             <div className=" w-full md:w-2/5">
               <div className="hero-text">
                 <h1 className="text-[3.3rem] font-inter mb-2 text-white font-bold leading-tight">
-                  Modern Interior <span className="block">Design Studio</span>
+                  {heading} <span className="block">{headingSpan}</span>
                 </h1>
                 <p className="font-inter text-sm text-gray-400 my-7">
                   Donec vitae odio quis nisl dapibus malesuada. Nullam ac
