@@ -3,9 +3,3 @@ const UserContext = React.createContext()
 
 export default UserContext;
 
-// creating context provider (it is must)
-
-<UserContext>
-
-    
-</UserContext>
