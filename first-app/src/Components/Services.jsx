@@ -8,7 +8,7 @@ function Services() {
         <>
 
 
-            <section className='py-20 bg-gray-100'>
+            <section className='py-20 bg-gray-100 '>
                 <div className="container mx-auto">
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full lg:w-1/4 md:1/3 p-2">

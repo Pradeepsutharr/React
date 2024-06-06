@@ -2,7 +2,7 @@ import React from 'react'
 
 function WhyChooseUs() {
     return (
-        <section className='bg-gray-100 py-20'>
+        <section className='bg-gray-100 py-20 '>
             <div className="container mx-auto">
                 <div className="flex flex-wrap justify-between py-8 gap-y-12 md:gap-y-0">
                     <div className="w-full md:w-1/2">

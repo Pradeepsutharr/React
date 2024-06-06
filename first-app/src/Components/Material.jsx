@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 function Material() {
     return (
-        <section className='crafted py-20 bg-gray-100'>
+        <section className='sticky top-0crafted py-20 bg-gray-100'>
             <div className="container mx-auto">
                 <div className="flex flex-wrap gap-y-5 py-8 ">
                     <div className="w-full md:w-1/4 p-2">

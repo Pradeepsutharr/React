@@ -9,7 +9,7 @@ import Blogs from '../Components/Blogs'
 export default function Home() {
     return (
         <>
-            <Homepage heading={"Modern Interior"} headingSpan={"Design Studio"} />
+            <Homepage heading={"Modern Interior"} headingSpan={"Design Studio"}/>
             <Material />
             <WhyChooseUs />
             <ModernInterior />

@@ -4,7 +4,7 @@ import WhyChooseUs from "./WhyChooseUs";
 export default function Hero({ heading, headingSpan }) {
   return (
     <>
-      <section className="home py-20 md:py-0" style={{ backgroundColor: "#3b5d50" }}>
+      <section className=" home py-20 md:py-0" style={{ backgroundColor: "#3b5d50" }}>
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-between items-center">
             <div className=" w-full md:w-2/5">

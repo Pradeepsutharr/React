@@ -15,7 +15,7 @@ export default function ReviewSlider() {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     return (
-        <section className='py-20 bg-gray-100'>
+        <section className='py-20 bg-gray-100 '>
 
             <h2 className='text-gray-800 text-center mb-5 text-3xl font-semibold'>Testimonials</h2>
 

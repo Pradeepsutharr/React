@@ -2,7 +2,7 @@ import React from "react";
 
 function ModernInterior() {
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-gray-100 ">
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between">
           <div className="md:w-7/12 w-full ">

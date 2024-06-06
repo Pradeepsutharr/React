@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <footer className="pt-20">
+        <footer className="pt-20 ">
             <div className="container mx-auto">
                 <div className="flex flex-wrap justify-center  lg:justify-between relative">
                     <div className="w-full md:w-7/12">
