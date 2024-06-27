@@ -5,8 +5,8 @@ function ThemeBtn() {
   const { themeMode, darkTheme, lightTheme } = useTheme();
 
   const BtnChange = (e) => {
-    const DarkStatus = e.currentTarget.checked;
-    if (DarkStatus) {
+    const DarkMode = e.currentTarget.checked;
+    if (DarkMode) {
       darkTheme();
     } else {
       lightTheme();
@@ -38,7 +38,7 @@ function ThemeBtn() {
         </label>
       </div>
       <span class="font-medium text-gray-400">
-        Toggle Theme
+        {themeMode}
       </span>
     </div>
 
