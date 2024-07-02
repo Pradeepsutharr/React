@@ -16,7 +16,7 @@ function App() {
     if (Num) str += "1234567890";
     if (Symbol) str += "!@#$%&*";
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < Length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       Pass += str.charAt(char);
     }

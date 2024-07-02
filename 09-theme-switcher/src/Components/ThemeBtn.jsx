@@ -25,7 +25,7 @@ function ThemeBtn() {
         </label>
       </div>
       <span class="font-medium text-gray-400">
-        Toggle Theme
+        {themeMode}
       </span>
     </div>
 
