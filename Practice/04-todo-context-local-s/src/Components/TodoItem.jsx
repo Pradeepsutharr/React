@@ -18,7 +18,7 @@ function TodoItem({ myTodo }) {
 
   return (
     <div
-      className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
+      className={`flex items-center border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
         myTodo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
       }`}
     >
@@ -28,6 +28,7 @@ function TodoItem({ myTodo }) {
         checked={myTodo.completed}
         onChange={complete}
       />
+
       <input
         type="text"
         className={`border outline-none w-full bg-transparent rounded-lg ${
@@ -38,9 +39,13 @@ function TodoItem({ myTodo }) {
         readOnly={!todoEditable}
       />
 
-      <h2 className="font-medium">
-        {myTodo.completed ? "completed" : "Pending"}
-      </h2>
+      <span>
+        {myTodo.completed ? (
+          <i class="fa-regular fa-circle-check"></i>
+        ) : (
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        )}
+      </span>
       {/* Edit, Save Button */}
       <button
         className="inline-flex w-8 h-8 rounded-lg text-sm border border-black/10 justify-center items-center bg-gray-50 hover:bg-gray-100 shrink-0 disabled:opacity-50"
