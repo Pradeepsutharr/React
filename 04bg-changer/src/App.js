@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div
-      className="w-full flex duration-500 justify-center h-screen"
+      className="w-full flex duration-500  justify-center h-screen"
       style={{ backgroundColor: color }}
     >
       <h1 className="text-6xl font-semibold my-auto">Bg Changer</h1>
