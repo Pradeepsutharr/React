@@ -11,6 +11,13 @@ function App() {
   const Currency = useCurrency(from);
   const allCurrencies = Object.keys(Currency);
 
+  const handleSwap = () => {
+    setFrom(to);
+    setTo(from);
+    setAmount(convertedAmount);
+    setCovertedAmount(amount);
+  };
+
   const Convert = () => {
     if (!amount) return alert("Please Enter A Valid Amount");
     setCovertedAmount(amount * Currency[to]);
@@ -45,6 +52,8 @@ function App() {
             ))}
           </select>
         </div>
+        <br />
+        <button onClick={handleSwap}>Swap</button>
 
         <div>
           <label style={{ display: "block", textAlign: "left" }} htmlFor="">

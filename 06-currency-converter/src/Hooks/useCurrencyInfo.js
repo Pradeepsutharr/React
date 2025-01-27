@@ -9,7 +9,7 @@ function useCurrencyInfo(Currency) {
         )
             .then((res) => res.json())
             .then((res) => setData(res[Currency]))
-            .catch((error => console.log("Api Fetch Faild")))
+            .catch((error => console.log("Api Fetch Failed")))
         // console.log(data);
     }, [Currency]);
     // console.log(data)
