@@ -19,10 +19,10 @@ function ExpenseForm({ addExpense }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-4 rounded shadow-md mb-4"
+      className="bg-gray-700 p-4 rounded shadow-md mb-4 w-full"
     >
       <div className="mb-4">
-        <label className="block mb-2">Description</label>
+        <label className="block mb-2 text-white">Description</label>
         <input
           type="text"
           value={description}
@@ -31,7 +31,7 @@ function ExpenseForm({ addExpense }) {
         />
       </div>
       <div className="mb-4">
-        <label className="block mb-2">Amount</label>
+        <label className="block mb-2 text-white">Amount</label>
         <input
           type="number"
           value={amount}

@@ -13,11 +13,20 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">Expense Tracker</h1>
-      <ExpenseForm addExpense={addExpense} />
-      <ExpenseSummary expenses={expenses} />
-      <ExpenseList expenses={expenses} />
+    <div className="w-4/5 mx-auto p-6">
+      <h1 className="text-3xl font-bold text-center mb-6 text-white">
+        Expense Tracker
+      </h1>
+      <div className="flex justify-between w-full">
+        <div className="w-2/5">
+          <ExpenseForm addExpense={addExpense} />
+        </div>
+
+        <div className="w-2/5">
+          <ExpenseSummary expenses={expenses} />
+          <ExpenseList expenses={expenses} />
+        </div>
+      </div>
     </div>
   );
 }

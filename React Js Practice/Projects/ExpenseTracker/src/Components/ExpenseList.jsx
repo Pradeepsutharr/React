@@ -2,7 +2,7 @@ import React from "react";
 
 function ExpenseList({ expenses }) {
   return (
-    <div className="bg-white p-4 rounded shadow-md">
+    <div className="bg-gray-700 p-4 rounded text-white shadow-md w-full">
       <h2 className="text-xl font-bold mb-4">Expense History</h2>
       {expenses.length === 0 ? (
         <p>No expenses added yet.</p>
